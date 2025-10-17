@@ -10,14 +10,18 @@
     font-family: Ubuntu Italic;
     src: url(/fonts/Ubuntu-Italic.ttf);
 }
+html, body {
+  height: 100%;
+}
 body {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
     background-image: url("/images/aurora-borealis-landscape-sea.jpg");
-    /*background-color: gray;*/
     background-size: cover;      /* ajuste pour remplir le bloc */
     background-repeat: no-repeat;
     font-family: Ubuntu Regular;
-  height: 100%;
   margin: 0;
 }
 h2 {
@@ -28,31 +32,30 @@ p {
     font-size: 1.15em;
 }
 .wrapper {
+  flex: 1; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
 }
 nav {
   margin: 7px 7px 0 7px;
   display: flex;
   align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    height: 15vh;
     align-self: center;
     width: 99vw;
+    border-radius: 15px;
 }
 nav img {
-  height: 12vh;
+  height: 5.5vw;
     margin: 10px;
 }
 nav .links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 5vw;
   width: 94.4vw;
 }
 nav .item {
@@ -62,34 +65,24 @@ nav .item {
 }
 
 .page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-color: rgba(249, 249, 249, 0.5);    /* couleur de fond */
   border-radius: 12px;
   border: 5px solid black;       
-  margin: 5vw auto;            /* espacement entre les sections */
-  max-width: 800px;
-  height: 100%;       /* largeur max pour éviter trop grand */
+  margin: 4vw auto;            /* espacement entre les sections */
 
 }
 
 /* Footer Styles */
 footer {
-  position: absolute;
   display: flex;                 /* active flexbox */
   flex-direction: column;        /* empile le contenu */
   justify-content: center;       /* centre verticalement */
   align-items: center;           /* centre horizontalement */
-  
   background: black;
   color: white;
-  padding: 1em;
-  margin: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  padding: 1em 0;
   text-align: center;
+  width: 100%;
 }
     
     footer .footer-content {
